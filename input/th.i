@@ -81,8 +81,8 @@
   solve_type = 'PJFNK'
 
   start_time = 0.0
-   num_steps = 10
-          dt = 0.0001
+   num_steps = 1000
+          dt = 0.001
 []
 
 [Outputs]
