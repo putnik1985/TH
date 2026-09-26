@@ -38,10 +38,17 @@
 []
 
 [ICs]
- [constant]
-  type = ConstantIC
+ [domain]
+  type = BoundingBoxIC
   variable = T
-  value = 320.
+  
+  x1 = 0.8333
+  x2 = 1.1666
+  y1 = 0.3333
+  y2 = 0.6666
+
+   inside = 268.15
+  outside = 278.15
  []
 []
 
@@ -65,7 +72,7 @@
     type = DirichletBC
     variable = T
     boundary = left
-    value = 373.15
+    value = 278.15
   [../]
 
   [./right] # arbitrary user-chosen name
@@ -81,8 +88,8 @@
   solve_type = 'PJFNK'
 
   start_time = 0.0
-   num_steps = 1000
-          dt = 0.001
+   num_steps = 50
+          dt = 0.0001
 []
 
 [Outputs]

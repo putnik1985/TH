@@ -9,7 +9,7 @@
 
 #include "DomainIC.h"
 
-registerMooseObject("thApp", DomainIC);
+registerMooseObject("DomainApp", DomainIC);
 
 InputParameters
 DomainIC::validParams()
