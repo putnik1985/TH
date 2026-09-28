@@ -9,7 +9,7 @@
 
 #include "DomainIC.h"
 
-registerMooseObject("DomainApp", DomainIC);
+registerMooseObject("THApp", DomainIC);
 
 InputParameters
 DomainIC::validParams()
@@ -34,7 +34,7 @@ DomainIC::value(const Point & p)
   Real x = p(0);
   Real y = p(1);
 
-  if (x<=4./3. && x>=2./3. && y<=5./6. && y>=1./6.){
+  if (x<=7./6. && x>=5./6. && y<=2./3. && y>=1./3.){
       return T_subdomain;
   } else {
       return T_domain;

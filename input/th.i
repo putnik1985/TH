@@ -18,7 +18,8 @@
 
 [Kernels]
  [conduction]
-  type = HeatConduction 
+  type = HeatConduction_NP 
+  heat_conduction = 12.0
   variable = T
  []
 
@@ -38,18 +39,25 @@
 []
 
 [ICs]
- [domain]
-  type = BoundingBoxIC
-  variable = T
+# [domain]
+#  type = BoundingBoxIC
+#  variable = T
   
-  x1 = 0.8333
-  x2 = 1.1666
-  y1 = 0.3333
-  y2 = 0.6666
+#  x1 = 0.8333
+#  x2 = 1.1666
+#  y1 = 0.3333
+#  y2 = 0.6666
 
-   inside = 268.15
-  outside = 278.15
- []
+#   inside = 268.15
+#  outside = 278.15
+# []
+  [domain]
+   type = DomainIC
+   variable = T
+
+   T_domain = 278.15
+   T_subdomain = 268.15
+  []
 []
 
 [BCs]
