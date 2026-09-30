@@ -24,8 +24,8 @@
  []
 
  [dT_dt]
-  type = SpecificHeatConductionTimeDerivative
-  specific_heat = 6000.
+  type = TimeDerivative_NP
+  heat_capacity = 6000.
         density = 3000.
        variable = T
  []
